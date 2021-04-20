@@ -96,13 +96,13 @@ class Game {
       gameState = 2;
       player.rank += 1;
       Player.updateCarsAtEnd(player.rank); 
-      swal({
+      /*swal({
        title: `Awesome!${"\n"}Rank${"\n"}${player.rank}`,
        text: "You reached the finish line successfully",
        imageUrl: "https://raw.githubusercontent.com/vishalgaddam873/p5-multiplayer-car-race-game/master/assets/cup.png",
        imageSize: "100x100",
        confirmButtonText: "Ok",
-      });
+      });*/
     }
    
     drawSprites();
@@ -111,7 +111,7 @@ class Game {
   end(){
     //console.log("Game Ended");
     //console.log(player.rank);
-    text("Game Ended",displayWidth/3,displayHeight/4);
-    text("Your Rank " + player.rank,displayWidth/2,displayHeight/2);
+    text("Game Ended",displayWidth/3,camera.position.y);
+    text("Your Rank " + player.rank,displayWidth/2,camera.position.y);
   }
 }
